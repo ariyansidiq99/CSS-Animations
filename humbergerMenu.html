@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humberger Menu</title>
+    <link rel="stylesheet" href="hamburger.css">
+</head>
+<body>
+    <button class="hamburger" aria-labelledby="Toggle menu" aria-expanded="false">
+        <span class="hamburger_line"></span>
+        <span class="hamburger_line"></span>
+        <span class="hamburger_line"></span>
+    </button>
+
+    <script>
+       document.querySelector('.hamburger').addEventListener('click', function() { 
+  const isOpen = this.getAttribute('aria-expanded') === 'true'; 
+   this.setAttribute('aria-expanded', !isOpen); 
+       })
+    </script>
+</body>
+</html>
